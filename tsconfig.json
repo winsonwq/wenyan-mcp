@@ -12,7 +12,6 @@
     "composite": true,
     "baseUrl": ".",
     "outDir": "dist",
-    "rootDir": "src",
     "noImplicitAny": false,
     "declarationDir": "dist/types",
   },
