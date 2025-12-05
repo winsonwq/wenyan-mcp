@@ -79,7 +79,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             {
                 name: "publish_image_message",
                 description:
-                    "发布图片消息（图文消息）到微信公众号草稿箱。图片消息由多张图片和一段文字描述组成，类似小红书笔记的形式。",
+                    "发布图片消息（图文消息）到微信公众号草稿箱。图片消息由多张图片和一段文字描述组成，类似小红书笔记的形式。注意：content 字段仅支持纯文本，不支持 HTML 格式，因此不需要使用 theme 进行格式化。",
                 inputSchema: {
                     type: "object",
                     properties: {
@@ -89,7 +89,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
                         },
                         content: {
                             type: "string",
-                            description: "文字描述内容",
+                            description: "文字描述内容（纯文本，不支持 HTML 格式）",
                         },
                         images: {
                             type: "array",
